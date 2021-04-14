@@ -12,9 +12,9 @@ display a list of Pokémon.
 
 Key Features
 
-● Load data from an external source (API)
-● View a list of items
-● On user action (e.g., by clicking on a list item), view details for that item
+1. Load data from an external source (API)
+1. View a list of items
+1. On user action (e.g., by clicking on a list item), view details for that item
 
 Technical Requirements
 
