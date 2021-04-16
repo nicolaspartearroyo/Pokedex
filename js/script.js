@@ -20,6 +20,18 @@ let pokemonList =
 ];
 
 // Write Pokemons name + height + type.
+// For some reason I have to put var i = number otherwise console tell me variable is undefined.
+var i = 0;
+for (let i = 0; i < pokemonList.lenght; i++); {
+  document.write(pokemonList[i].name + '. Height: ' + pokemonList[i].height + '. Type: ' + pokemonList[i].type);
+}
+
+var i = 1;
+for (let i = 0; i < pokemonList.lenght; i++); {
+  document.write(pokemonList[i].name + '. Height: ' + pokemonList[i].height + '. Type: ' + pokemonList[i].type);
+}
+
+var i = 2;
 for (let i = 0; i < pokemonList.lenght; i++); {
   document.write(pokemonList[i].name + '. Height: ' + pokemonList[i].height + '. Type: ' + pokemonList[i].type);
 }
