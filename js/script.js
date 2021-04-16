@@ -19,10 +19,12 @@ let pokemonList =
   }
 ];
 
+// Write Pokemons name + height + type.
 for (let i = 0; i < pokemonList.lenght; i++); {
   document.write(pokemonList[i].name + '. Height: ' + pokemonList[i].height + '. Type: ' + pokemonList[i].type);
 }
 
+// Height condition
 for (let i = 0; i < pokemonList.lenght; i++); {
   if (pokemonList[i].height > 1) {
     document.write('. Woow, thats big!');
