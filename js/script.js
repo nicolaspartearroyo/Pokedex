@@ -1,4 +1,4 @@
-//let pokemonRepository = (function(){
+let pokemonRepository = (function(){
 let pokemonList =
 [
   {
@@ -27,17 +27,16 @@ pokemonList.forEach(function(pokemon)
     }
   })
 
-
-//})();
-
-//console.log(pokemonRepository.getAll()); // []
-//pokemonRepository.add({ name: 'Pikachu' });
-/*return {
+  return {
     add: function(pokemon) {
-      pokemonList.push(pokemon);
-    },
+    pokemonList.push(pokemon);
+  },
+
     getAll: function() {
       return pokemonList;
     }
-}
-*/
+  };
+
+})();
+
+pokemonRepository.add({item:''});
