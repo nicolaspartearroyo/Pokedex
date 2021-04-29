@@ -9,6 +9,7 @@ body {
 ul {
   list-style-type: none;
   padding: 0;
+
 }
 
 .buttonList {
@@ -19,6 +20,8 @@ ul {
   padding: 10px;
   font-size: 14px;
   text-align: left;
+  text-transform: capitalize;
+
 }
 
 .buttonList:hover {
@@ -65,8 +68,8 @@ h1 {
   padding: 15px;
   width: 100%;
   max-width: 700px;
-  text-align: left;
-
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .modal-close {
