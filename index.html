@@ -8,16 +8,15 @@
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
-<body>
+<body class="container">
   <!-- Navigation bar-->
-  <div class="container">
-        <nav class="navbar fixed-top stylec p-1 mb-2 bg-primary text-white">
-          <h1 class="navbar-text">Pokedex</h1>
-        </nav>
+  <nav class="navbar fixed-top stylec p-1 mb-2 bg-primary text-white">
+    <h1 class="navbar-text sr-only-focusable">Pokedex</h1>
+  </nav>
+<!-- Pokemon list-->
+  <div class="list-group sr-only-focusable list-group-flush mb-2">
   </div>
 
-  <div class="list-group list-group-flush flex-row justify-content-center flex-wrap">
-  </div>
   <!-- Modal -->
   <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -29,7 +28,6 @@
           </button>
         </div>
         <div class="modal-body">
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
@@ -37,12 +35,6 @@
       </div>
     </div>
   </div>
-
-<!--
-  <h1>Pokedex</h1>
-  <ul class="pokemon-list"></ul>
-  <div id="modal-container">
-  </div> -->
 
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
