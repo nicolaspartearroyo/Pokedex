@@ -22,7 +22,7 @@ let pokemonRepository = (function () {
     listItem.classList.add('list-group-item');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
-    button.classList.add('btn', 'btn-lg', 'btn-block', 'btn-dark', 'text-capitalize');
+    button.classList.add('btn', 'btn-md', 'btn-block', 'btn-dark', 'text-capitalize');
     button.setAttribute('data-target', '#pokemonModal', 'data-toggle', 'modal');
     pokemonList.appendChild(listItem);
     listItem.appendChild(button);
@@ -57,11 +57,18 @@ let pokemonRepository = (function () {
     }).then(function (details) {
       pokemon.imageUrl = details.sprites.front_default;
       pokemon.height = details.height;
+      pokemon.weight = details.weight;
       pokemon.types = details.types;
       pokemon.types = [];
           details.types.forEach(function (pokemonType) {
           pokemon.types.push(' ' + pokemonType.type.name);
         });
+      pokemon.abilities = details.abilities;
+      pokemon.abilities = [];
+          details.abilities.forEach(function(pokemonAbility) {
+          pokemon.abilities.push(' ' + pokemonAbility.ability.name);
+        });
+
     }).catch(function (e) {
       console.error(e);
     });
@@ -83,17 +90,33 @@ let pokemonRepository = (function () {
 
       let heightElement = $('<p>' + 'Height: ' + pokemon.height + '</p>');
 
+      let weightElement = $('<p>' + 'Weight: ' + pokemon.weight + '</p>');
+
+
       let typeElement = $('<p>' + 'Type: ' + pokemon.types + '</p>');
+
+      let abilityElement = $('<p>' + 'Ability: ' + pokemon.abilities + '</p>');
 
 
       modalTitle.append(nameElement);
       modalBody.append(imageElement);
       modalBody.append(heightElement);
+      modalBody.append(weightElement);
       modalBody.append(typeElement);
+      modalBody.append(abilityElement);
       $('#pokemonModal').modal('toggle');
 
     });
   }
+
+  $(document).ready(function(){
+  $('#myInput').on('keyup', function() {
+    var value = $(this).val().toLowerCase();
+    $('li').filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
 
   return {
     add: add,
