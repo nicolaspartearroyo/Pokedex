@@ -31,7 +31,6 @@ let pokemonRepository = (function () {
     });
   }
 
-
   //load Pokemon list
   function loadList() {
     return fetch(apiUrl).then(function (response) {
@@ -74,7 +73,6 @@ let pokemonRepository = (function () {
     });
   }
 
-
   function showModal(pokemon) {
     pokemonRepository.loadDetails(pokemon).then(function () {
       let modalBody = $('.modal-body');
@@ -89,14 +87,9 @@ let pokemonRepository = (function () {
       imageElement.attr('src', pokemon.imageUrl);
 
       let heightElement = $('<p>' + 'Height: ' + pokemon.height + '</p>');
-
       let weightElement = $('<p>' + 'Weight: ' + pokemon.weight + '</p>');
-
-
       let typeElement = $('<p>' + 'Type: ' + pokemon.types + '</p>');
-
       let abilityElement = $('<p>' + 'Ability: ' + pokemon.abilities + '</p>');
-
 
       modalTitle.append(nameElement);
       modalBody.append(imageElement);

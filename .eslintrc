@@ -1,7 +1,9 @@
 {
     "env": {
         "es6": true,
-        "browser": true
+        "browser": true,
+        "jquery": true,
+        "console.log": allow,
     },
     "extends": [
         "eslint:recommended"
